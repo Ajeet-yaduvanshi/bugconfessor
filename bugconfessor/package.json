@@ -1,0 +1,13 @@
+{
+  "name": "bugconfessor",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm start --prefix frontend",
+    "start": "concurrently -n BACKEND,FRONTEND -c green,blue \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
