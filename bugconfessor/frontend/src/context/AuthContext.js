@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
-
+const BASE_URL = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || "https://bugconfessor.onrender.com";
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
